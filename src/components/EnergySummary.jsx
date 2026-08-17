@@ -41,9 +41,9 @@ function EnergySummary({ energySummary }) {
           Energy summary
         </h2>
       </div>
-      <div className="overflow-hidden rounded-2xl border border-white bg-parchment-50 shadow-card">
+      <div className="overflow-hidden rounded-xl border border-cream-200 bg-cream-50 shadow-card">
         <div className="h-1 bg-clay-500" />
-        <div className="grid grid-cols-1 gap-px bg-parchment-200 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid grid-cols-1 gap-px bg-cream-200 sm:grid-cols-2 lg:grid-cols-5">
           {tiles.map((tile) => (
             <EnergyTile
               key={tile.label}
