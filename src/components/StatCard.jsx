@@ -9,15 +9,15 @@ function StatCard({
   meterPercent,
 }) {
   const cardClasses = featured
-    ? "bg-pitch-800 text-sheet shadow-lift"
-    : "card-mark border border-pitch-800/15 bg-sheet text-ink-900 shadow-card";
+    ? "bg-pitch-800 text-white shadow-lift"
+    : "card-mark border border-black/5 bg-white text-pitch-900 shadow-card";
 
   const labelClasses = featured ? "text-bone-300" : "text-ink-400";
-  const numberClasses = featured ? "text-brass-400" : "text-ink-900";
+  const numberClasses = featured ? "text-brass-400" : "text-pitch-900";
   const unitClasses = featured ? "text-bone-300" : "text-ink-400";
   const iconWrap = featured
     ? "bg-pitch-700 text-brass-400"
-    : "bg-brass-500/15 text-brass-600";
+    : "bg-brass-500/10 text-brass-600";
 
   return (
     <article
@@ -47,7 +47,7 @@ function StatCard({
 function TickMeter({ percent, featured }) {
   const filled = Math.round(percent / 10);
   const on = featured ? "bg-brass-400" : "bg-brass-500";
-  const off = featured ? "bg-pitch-600" : "bg-bone-200";
+  const off = featured ? "bg-pitch-600" : "bg-bone-100";
 
   return (
     <div className="mt-3 flex gap-1" aria-hidden="true">

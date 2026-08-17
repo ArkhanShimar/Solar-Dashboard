@@ -1,4 +1,5 @@
 import StatCard from "./StatCard";
+import SectionBar from "./SectionBar";
 
 function LiveStats({ liveStats }) {
   const cards = [
@@ -45,12 +46,7 @@ function LiveStats({ liveStats }) {
 
   return (
     <section>
-      <div className="mb-3">
-        <p className="text-[11px] font-bold tracking-[0.2em] text-clay-600">
-          RIGHT NOW
-        </p>
-        <h2 className="mt-0.5 font-display text-xl text-ink-900 md:text-2xl">Live stats</h2>
-      </div>
+      <SectionBar kicker="RIGHT NOW" title="Live stats" />
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {cards.map((card) => (
           <StatCard
