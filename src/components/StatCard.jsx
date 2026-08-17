@@ -10,7 +10,7 @@ function StatCard({
 }) {
   const cardClasses = featured
     ? "bg-pitch-800 text-bone-50 shadow-lift"
-    : "card-mark border border-pitch-900/10 bg-bone-50 text-ink-900 shadow-card";
+    : "card-mark border border-pitch-900/15 bg-white text-ink-900 shadow-card";
 
   const labelClasses = featured ? "text-bone-300" : "text-ink-400";
   const numberClasses = featured ? "text-brass-400" : "text-ink-900";
@@ -47,7 +47,7 @@ function StatCard({
 function TickMeter({ percent, featured }) {
   const filled = Math.round(percent / 10);
   const on = featured ? "bg-brass-400" : "bg-brass-500";
-  const off = featured ? "bg-pitch-600" : "bg-bone-200";
+  const off = featured ? "bg-pitch-600" : "bg-pitch-900/10";
 
   return (
     <div className="mt-3 flex gap-1" aria-hidden="true">

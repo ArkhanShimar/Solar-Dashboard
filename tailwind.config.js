@@ -39,7 +39,7 @@ export default {
         sans: ["Atkinson Hyperlegible", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        card: "0 8px 20px -16px rgba(20, 23, 20, 0.45)",
+        card: "0 10px 24px -14px rgba(20, 23, 20, 0.35)",
         lift: "0 10px 22px -14px rgba(20, 23, 20, 0.55)",
       },
       keyframes: {
