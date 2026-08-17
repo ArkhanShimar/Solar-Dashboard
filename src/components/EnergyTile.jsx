@@ -8,12 +8,10 @@ function EnergyTile({ label, value, unit, tone }) {
 
   return (
     <article className="bg-pitch-800 px-4 py-4 last:sm:col-span-2 last:lg:col-span-1">
-      <p className="text-[11px] font-bold tracking-[0.14em] text-bone-300">
-        {label}
-      </p>
+      <p className="text-[11px] font-bold tracking-[0.14em] text-bone-300">{label}</p>
       <p
         className={`mt-2 font-numbers text-3xl font-extrabold tabular-nums leading-none tracking-tight ${
-          numberClasses[tone] || "text-sheet"
+          numberClasses[tone] || "text-white"
         }`}
       >
         {formatValue(value)}

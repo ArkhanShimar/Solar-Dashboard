@@ -1,9 +1,10 @@
 import EnergyTile from "./EnergyTile";
+import SectionBar from "./SectionBar";
 
 function EnergySummary({ energySummary }) {
   const tiles = [
     {
-      label: "TODAY'S ENERGY",
+      label: "TODAY",
       value: energySummary.todayKWh,
       unit: "kWh",
       tone: "brass",
@@ -19,7 +20,7 @@ function EnergySummary({ energySummary }) {
       unit: "kWh",
     },
     {
-      label: "LIFETIME TOTAL",
+      label: "LIFETIME",
       value: energySummary.totalLifetimeKWh,
       unit: "kWh",
     },
@@ -33,16 +34,10 @@ function EnergySummary({ energySummary }) {
 
   return (
     <section>
-      <div className="mb-3">
-        <p className="text-[11px] font-bold tracking-[0.2em] text-brass-600">
-          PRODUCTION
-        </p>
-        <h2 className="mt-0.5 font-display text-xl text-ink-900 md:text-2xl">
-          Energy summary
-        </h2>
-      </div>
-      <div className="overflow-hidden rounded-xl bg-pitch-600 shadow-lift">
-        <div className="grid grid-cols-1 gap-px sm:grid-cols-2 lg:grid-cols-5">
+      <SectionBar kicker="PRODUCTION" title="Energy summary" />
+      <div className="overflow-hidden rounded-xl bg-pitch-800 shadow-lift">
+        <div className="h-[3px] bg-brass-500" />
+        <div className="grid grid-cols-1 gap-px bg-pitch-600 sm:grid-cols-2 lg:grid-cols-5">
           {tiles.map((tile) => (
             <EnergyTile
               key={tile.label}
