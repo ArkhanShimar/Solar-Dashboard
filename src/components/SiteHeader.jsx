@@ -2,7 +2,7 @@ function SiteHeader({ siteInfo }) {
   const { siteName, location, totalPanels, activePanels } = siteInfo;
 
   return (
-    <header className="overflow-hidden rounded-2xl border border-white bg-parchment-50 shadow-card">
+    <header className="overflow-hidden rounded-xl border border-cream-200 bg-cream-50 shadow-card">
       <div className="h-1 bg-clay-500" />
       <div className="flex flex-col gap-4 px-4 py-3.5 md:flex-row md:items-center md:justify-between md:px-5 md:py-3.5">
         <div>
@@ -19,7 +19,7 @@ function SiteHeader({ siteInfo }) {
         </div>
 
         <div className="flex flex-wrap items-center gap-3">
-          <div className="flex items-center gap-5 rounded-xl bg-white px-4 py-2 ring-1 ring-parchment-200">
+          <div className="flex items-center gap-5 rounded-lg border border-cream-200 bg-cream-100 px-4 py-2">
             <div>
               <p className="font-numbers text-2xl font-extrabold tabular-nums leading-none tracking-tight text-ink-900">
                 {totalPanels}
@@ -28,7 +28,7 @@ function SiteHeader({ siteInfo }) {
                 TOTAL PANELS
               </p>
             </div>
-            <div className="h-8 w-px bg-parchment-200" />
+            <div className="h-8 w-px bg-cream-200" />
             <div>
               <p className="font-numbers text-2xl font-extrabold tabular-nums leading-none tracking-tight text-ink-900">
                 {activePanels}
@@ -38,7 +38,7 @@ function SiteHeader({ siteInfo }) {
               </p>
             </div>
           </div>
-          <span className="inline-flex items-center gap-2 rounded-full bg-moss-500/10 px-3 py-1.5 text-sm font-bold text-moss-600 ring-1 ring-moss-400/40">
+          <span className="inline-flex items-center gap-2 rounded-full border border-moss-400/50 bg-moss-500/10 px-3 py-1.5 text-sm font-bold text-moss-600">
             <span className="h-2 w-2 rounded-full bg-moss-500 animate-soft-pulse" />
             Online
           </span>

@@ -4,11 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        parchment: {
-          50: "#FFFcf8",
-          100: "#F8F1E7",
-          200: "#E8DCC8",
-          300: "#D4C4A8",
+        cream: {
+          50: "#FFFCF7",
+          100: "#F7EFE3",
+          200: "#E8D7C0",
         },
         clay: {
           400: "#E07B4A",
@@ -34,8 +33,8 @@ export default {
         sans: ["Atkinson Hyperlegible", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        card: "0 1px 0 rgba(255, 255, 255, 0.8), 0 10px 24px -14px rgba(44, 38, 33, 0.4)",
-        lift: "0 12px 26px -12px rgba(196, 92, 42, 0.45)",
+        card: "0 1px 0 rgba(22, 19, 16, 0.04), 0 12px 28px -14px rgba(22, 19, 16, 0.35)",
+        lift: "0 10px 24px -12px rgba(164, 72, 31, 0.45)",
       },
       keyframes: {
         softPulse: {
