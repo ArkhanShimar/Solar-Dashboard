@@ -45,13 +45,11 @@ function LiveStats({ liveStats }) {
 
   return (
     <section>
-      <div className="mb-4 flex items-end justify-between gap-3">
-        <div>
-          <p className="text-xs font-bold tracking-[0.22em] text-clay-600">
-            RIGHT NOW
-          </p>
-          <h2 className="mt-1 font-display text-2xl text-ink-900">Live stats</h2>
-        </div>
+      <div className="mb-4">
+        <p className="text-xs font-bold tracking-[0.22em] text-clay-600">
+          RIGHT NOW
+        </p>
+        <h2 className="mt-1 font-display text-2xl text-ink-900">Live stats</h2>
       </div>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {cards.map((card) => (
