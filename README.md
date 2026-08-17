@@ -1,16 +1,49 @@
-# React + Vite
+# Solar Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Intern task. Its a read only dashboard for Sunfield Solar Farm in Colombo.
 
-Currently, two official plugins are available:
+I used React with Vite. No backend and no api calls. All the numbers are in `src/data/solarData.js` (the same data they sent in the task).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## How to run
 
-## React Compiler
+You need Node installed.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```
+npm install
+npm run dev
+```
 
-## Expanding the Oxlint configuration
+Then open the local url Vite prints. Usually its `http://localhost:5173`.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+To make a production build:
+
+```
+npm run build
+npm run preview
+```
+
+## How its structured
+
+Components are in `src/components`. I didnt dump everything in App.jsx. App.jsx just imports the data and passes it down as props.
+
+Styling is Tailwind. No inline styles.
+
+## Whats done
+
+- Site header (name, location, total panels, active panels, Online badge)
+- Live stats cards
+- Energy summary
+
+## Still need to do
+
+- Hourly output chart (recharts)
+- Weekly output chart
+- Panel group table (Offline in red, Degraded in yellow)
+- A screenshot in this readme
+- The short note they asked for, about why I built it this way
+
+Dark mode is optional so I'll try it if I have time after the charts.
+
+## Notes
+
+Works on desktop and tablet. I havent really tested a tiny phone screen much.
