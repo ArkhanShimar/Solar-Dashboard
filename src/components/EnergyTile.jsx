@@ -9,13 +9,13 @@ function EnergyTile({ label, value, unit, tone }) {
 
   return (
     <article
-      className={`px-5 py-6 transition duration-200 last:sm:col-span-2 last:lg:col-span-1 hover:brightness-[0.98] md:px-6 md:py-7 ${tileClasses}`}
+      className={`px-4 py-4 transition duration-200 last:sm:col-span-2 last:lg:col-span-1 hover:brightness-[0.98] ${tileClasses}`}
     >
-      <p className="text-xs font-bold tracking-[0.16em] text-ink-400">{label}</p>
-      <p className="mt-4 font-numbers text-4xl font-extrabold tabular-nums leading-none tracking-tight text-ink-900 md:text-5xl">
+      <p className="text-[11px] font-bold tracking-[0.14em] text-ink-400">{label}</p>
+      <p className="mt-2 font-numbers text-3xl font-extrabold tabular-nums leading-none tracking-tight text-ink-900">
         {formatValue(value)}
       </p>
-      <p className="mt-2 text-sm font-bold text-ink-500">{unit}</p>
+      <p className="mt-1.5 text-sm font-bold text-ink-500">{unit}</p>
     </article>
   );
 }

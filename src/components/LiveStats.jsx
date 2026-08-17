@@ -8,14 +8,12 @@ function LiveStats({ liveStats }) {
       unit: "kW",
       featured: true,
       icon: <BoltIcon />,
-      className: "sm:col-span-2 lg:col-span-4",
     },
     {
       label: "TODAY'S PEAK",
       value: liveStats.peakOutputTodayKW,
       unit: "kW",
       icon: <PeakIcon />,
-      className: "sm:col-span-2 lg:col-span-2",
     },
     {
       label: "EFFICIENCY",
@@ -23,7 +21,6 @@ function LiveStats({ liveStats }) {
       unit: "%",
       meterPercent: liveStats.efficiencyPercent,
       icon: <GaugeIcon />,
-      className: "lg:col-span-3",
     },
     {
       label: "BATTERY LEVEL",
@@ -31,33 +28,30 @@ function LiveStats({ liveStats }) {
       unit: "%",
       meterPercent: liveStats.batteryLevelPercent,
       icon: <BatteryIcon />,
-      className: "lg:col-span-3",
     },
     {
       label: "GRID EXPORT",
       value: liveStats.gridExportKW,
       unit: "kW",
       icon: <GridIcon />,
-      className: "lg:col-span-3",
     },
     {
       label: "SELF CONSUMPTION",
       value: liveStats.selfConsumptionKW,
       unit: "kW",
       icon: <HomeIcon />,
-      className: "lg:col-span-3",
     },
   ];
 
   return (
     <section>
-      <div className="mb-4">
-        <p className="text-xs font-bold tracking-[0.22em] text-clay-600">
+      <div className="mb-3">
+        <p className="text-[11px] font-bold tracking-[0.2em] text-clay-600">
           RIGHT NOW
         </p>
-        <h2 className="mt-1 font-display text-2xl text-ink-900 md:text-3xl">Live stats</h2>
+        <h2 className="mt-0.5 font-display text-xl text-ink-900 md:text-2xl">Live stats</h2>
       </div>
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-6">
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {cards.map((card) => (
           <StatCard
             key={card.label}
@@ -67,7 +61,6 @@ function LiveStats({ liveStats }) {
             icon={card.icon}
             featured={card.featured}
             meterPercent={card.meterPercent}
-            className={card.className}
           />
         ))}
       </div>
