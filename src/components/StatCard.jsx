@@ -9,14 +9,14 @@ function StatCard({
   meterPercent,
 }) {
   const cardClasses = featured
-    ? "card-sun bg-clay-600 text-parchment-50 shadow-lift"
-    : "border border-parchment-300 bg-parchment-50 text-ink-900 shadow-card";
+    ? "bg-clay-600 text-parchment-50 shadow-lift"
+    : "card-mark border border-white bg-parchment-50 text-ink-900 shadow-card";
 
   const labelClasses = featured ? "text-parchment-200" : "text-ink-400";
   const unitClasses = featured ? "text-parchment-200" : "text-ink-400";
   const iconWrap = featured
     ? "bg-clay-700/80 text-parchment-50"
-    : "bg-parchment-100 text-clay-600";
+    : "bg-clay-500/10 text-clay-600";
 
   return (
     <article
