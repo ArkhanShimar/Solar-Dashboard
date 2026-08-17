@@ -30,6 +30,7 @@ export default {
       },
       fontFamily: {
         display: ["Fraunces", "Georgia", "serif"],
+        numbers: ["Big Shoulders Display", "Arial Narrow", "sans-serif"],
         sans: ["Atkinson Hyperlegible", "system-ui", "sans-serif"],
       },
       boxShadow: {

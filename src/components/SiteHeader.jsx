@@ -18,7 +18,7 @@ function SiteHeader({ siteInfo }) {
 
       <div className="flex flex-wrap items-center gap-3">
         <div className="rounded-xl border border-parchment-300 bg-parchment-50 px-4 py-3 shadow-card">
-          <p className="font-display text-2xl leading-none text-ink-900">
+          <p className="font-numbers text-3xl font-extrabold tabular-nums leading-none tracking-tight text-ink-900">
             {totalPanels}
           </p>
           <p className="mt-1 text-xs font-bold tracking-wide text-ink-400">
@@ -26,7 +26,7 @@ function SiteHeader({ siteInfo }) {
           </p>
         </div>
         <div className="rounded-xl border border-parchment-300 bg-parchment-50 px-4 py-3 shadow-card">
-          <p className="font-display text-2xl leading-none text-ink-900">
+          <p className="font-numbers text-3xl font-extrabold tabular-nums leading-none tracking-tight text-ink-900">
             {activePanels}
           </p>
           <p className="mt-1 text-xs font-bold tracking-wide text-moss-500">

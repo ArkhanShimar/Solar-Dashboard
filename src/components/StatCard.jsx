@@ -21,9 +21,9 @@ function StatCard({ label, value, unit, icon, featured, meterPercent }) {
         </p>
         <span className={`rounded-lg p-2 ${iconWrap}`}>{icon}</span>
       </div>
-      <p className="mt-6 font-display text-4xl font-medium leading-none">
+      <p className="mt-6 font-numbers text-5xl font-extrabold tabular-nums leading-none tracking-tight">
         {formatValue(value)}
-        <span className={`ml-1.5 text-base font-sans font-bold ${unitClasses}`}>
+        <span className={`ml-2 align-top text-base font-sans font-bold ${unitClasses}`}>
           {unit}
         </span>
       </p>
