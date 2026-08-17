@@ -1,4 +1,5 @@
 import { formatValue } from "../utils/format";
+import PercentRing from "./PercentRing";
 
 function StatCard({
   label,
@@ -9,55 +10,33 @@ function StatCard({
   meterPercent,
 }) {
   const cardClasses = featured
-    ? "bg-pitch-800 text-white shadow-lift"
-    : "card-mark border border-black/5 bg-white text-pitch-900 shadow-card";
-
-  const labelClasses = featured ? "text-bone-300" : "text-ink-400";
-  const numberClasses = featured ? "text-brass-400" : "text-pitch-900";
-  const unitClasses = featured ? "text-bone-300" : "text-ink-400";
-  const iconWrap = featured
-    ? "bg-pitch-700 text-brass-400"
-    : "bg-brass-500/10 text-brass-600";
+    ? "glass border-l-[3px] border-l-brass-500"
+    : "glass card-mark";
 
   return (
     <article
       className={`rounded-xl p-4 transition duration-200 hover:-translate-y-0.5 ${cardClasses}`}
     >
       <div className="relative flex items-start justify-between gap-3">
-        <p className={`text-[11px] font-bold tracking-[0.14em] ${labelClasses}`}>
+        <p className="text-[11px] font-bold tracking-[0.14em] text-ink-400">
           {label}
         </p>
-        <span className={`rounded-md p-1.5 ${iconWrap}`}>{icon}</span>
-      </div>
-      <p
-        className={`mt-3 font-numbers text-3xl font-extrabold tabular-nums leading-none tracking-tight md:text-4xl ${numberClasses}`}
-      >
-        {formatValue(value)}
-        <span className={`ml-1.5 align-top font-sans text-sm font-bold ${unitClasses}`}>
-          {unit}
+        <span className="rounded-md bg-brass-500/10 p-1.5 text-brass-600">
+          {icon}
         </span>
-      </p>
-      {typeof meterPercent === "number" ? (
-        <TickMeter percent={meterPercent} featured={featured} />
-      ) : null}
+      </div>
+      <div className="mt-3 flex items-end justify-between gap-3">
+        <p className="font-numbers text-3xl font-extrabold tabular-nums leading-none tracking-tight text-pitch-900 md:text-4xl">
+          {formatValue(value)}
+          <span className="ml-1.5 align-top font-sans text-sm font-bold text-ink-400">
+            {unit}
+          </span>
+        </p>
+        {typeof meterPercent === "number" ? (
+          <PercentRing percent={meterPercent} />
+        ) : null}
+      </div>
     </article>
-  );
-}
-
-function TickMeter({ percent, featured }) {
-  const filled = Math.round(percent / 10);
-  const on = featured ? "bg-brass-400" : "bg-brass-500";
-  const off = featured ? "bg-pitch-600" : "bg-bone-100";
-
-  return (
-    <div className="mt-3 flex gap-1" aria-hidden="true">
-      {Array.from({ length: 10 }).map((_, index) => (
-        <span
-          key={index}
-          className={`h-1 flex-1 rounded-sm ${index < filled ? on : off}`}
-        />
-      ))}
-    </div>
   );
 }
 
