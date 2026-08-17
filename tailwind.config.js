@@ -5,10 +5,10 @@ export default {
     extend: {
       colors: {
         parchment: {
-          50: "#FBF6EE",
-          100: "#F3E8D4",
-          200: "#E6D2B5",
-          300: "#D4B896",
+          50: "#FFFcf8",
+          100: "#F8F1E7",
+          200: "#E8DCC8",
+          300: "#D4C4A8",
         },
         clay: {
           400: "#E07B4A",
@@ -34,8 +34,8 @@ export default {
         sans: ["Atkinson Hyperlegible", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        card: "0 1px 0 rgba(44, 38, 33, 0.05), 0 14px 28px -18px rgba(44, 38, 33, 0.3)",
-        lift: "0 10px 28px -12px rgba(196, 92, 42, 0.38)",
+        card: "0 1px 0 rgba(255, 255, 255, 0.8), 0 10px 24px -14px rgba(44, 38, 33, 0.4)",
+        lift: "0 12px 26px -12px rgba(196, 92, 42, 0.45)",
       },
       keyframes: {
         softPulse: {
