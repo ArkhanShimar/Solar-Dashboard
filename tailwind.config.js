@@ -10,7 +10,6 @@ export default {
           200: "#D6D1C7",
           300: "#C2BDB2",
         },
-        sheet: "#FFFEFA",
         pitch: {
           600: "#3A413C",
           700: "#2A2F2B",
@@ -40,8 +39,8 @@ export default {
         sans: ["Atkinson Hyperlegible", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        card: "0 1px 0 rgba(20, 23, 20, 0.06), 0 12px 28px -14px rgba(20, 23, 20, 0.4)",
-        lift: "0 12px 28px -12px rgba(20, 23, 20, 0.5)",
+        card: "0 1px 0 rgba(20, 23, 20, 0.06), 0 12px 28px -14px rgba(20, 23, 20, 0.35)",
+        lift: "0 12px 30px -12px rgba(20, 23, 20, 0.5)",
       },
       keyframes: {
         softPulse: {
