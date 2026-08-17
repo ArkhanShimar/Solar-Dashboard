@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="page-shell paper-grain">
       <div className="h-2 bg-clay-500" />
-      <div className="relative mx-auto max-w-6xl px-4 py-8 md:px-8 md:py-10">
+      <div className="relative mx-auto max-w-6xl px-4 py-8 pb-16 md:px-8 md:py-10 md:pb-20">
         <SiteHeader siteInfo={siteInfo} />
         <main className="mt-10 flex flex-col gap-10">
           <LiveStats liveStats={liveStats} />

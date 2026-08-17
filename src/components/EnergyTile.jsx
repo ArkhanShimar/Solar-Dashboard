@@ -6,7 +6,7 @@ function EnergyTile({ label, value, unit, tinted }) {
     : "bg-parchment-50";
 
   return (
-    <article className={`px-5 py-6 ${tileClasses}`}>
+    <article className={`px-5 py-6 last:sm:col-span-2 last:lg:col-span-1 ${tileClasses}`}>
       <p className="text-xs font-bold tracking-[0.16em] text-ink-400">{label}</p>
       <p className="mt-3 font-display text-3xl font-medium leading-none text-ink-900">
         {formatValue(value)}
