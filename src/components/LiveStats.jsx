@@ -8,12 +8,14 @@ function LiveStats({ liveStats }) {
       value: liveStats.currentOutputKW,
       unit: "kW",
       featured: true,
+      area: "current",
       icon: <BoltIcon />,
     },
     {
       label: "TODAY'S PEAK",
       value: liveStats.peakOutputTodayKW,
       unit: "kW",
+      area: "peak",
       icon: <PeakIcon />,
     },
     {
@@ -21,6 +23,7 @@ function LiveStats({ liveStats }) {
       value: liveStats.efficiencyPercent,
       unit: "%",
       meterPercent: liveStats.efficiencyPercent,
+      area: "efficiency",
       icon: <GaugeIcon />,
     },
     {
@@ -28,18 +31,21 @@ function LiveStats({ liveStats }) {
       value: liveStats.batteryLevelPercent,
       unit: "%",
       meterPercent: liveStats.batteryLevelPercent,
+      area: "battery",
       icon: <BatteryIcon />,
     },
     {
       label: "GRID EXPORT",
       value: liveStats.gridExportKW,
       unit: "kW",
+      area: "export",
       icon: <GridIcon />,
     },
     {
       label: "SELF CONSUMPTION",
       value: liveStats.selfConsumptionKW,
       unit: "kW",
+      area: "self",
       icon: <HomeIcon />,
     },
   ];
@@ -47,10 +53,11 @@ function LiveStats({ liveStats }) {
   return (
     <section>
       <SectionBar kicker="RIGHT NOW" title="Live stats" />
-      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
+      <div className="grid grid-cols-2 gap-3 lg:grid-cols-3 [grid-template-areas:'current_peak'_'efficiency_battery'_'export_self'] lg:[grid-template-areas:'current_efficiency_battery'_'peak_export_self']">
         {cards.map((card) => (
           <StatCard
             key={card.label}
+            area={card.area}
             label={card.label}
             value={card.value}
             unit={card.unit}

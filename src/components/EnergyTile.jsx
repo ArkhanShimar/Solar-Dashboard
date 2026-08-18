@@ -7,7 +7,7 @@ function EnergyTile({ label, value, unit, tone }) {
   };
 
   return (
-    <article className="min-w-0 border-white/10 px-3 py-3 even:border-l last:col-span-2 last:md:col-span-1 md:border-l md:px-4 md:first:border-l-0">
+    <article className="min-w-0 border-white/15 px-3 py-3 even:border-l last:col-span-2 last:md:col-span-1 md:border-l md:px-4 md:py-4 md:first:border-l-0">
       <p className="copy-muted text-[10px] font-bold leading-tight tracking-[0.08em] md:text-[11px] md:tracking-[0.1em]">
         {label}
       </p>

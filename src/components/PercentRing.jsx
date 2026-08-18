@@ -12,7 +12,7 @@ function PercentRing({ percent }) {
         cy="18"
         r="15"
         fill="none"
-        className="stroke-[#161310]/20 dark:stroke-[#f3f0e8]/30"
+        className="stroke-[#161310]/20 dark:stroke-[#f0f0f0]/25"
         strokeWidth="3"
       />
       <circle

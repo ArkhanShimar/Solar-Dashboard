@@ -5,22 +5,22 @@ function SiteHeader({ siteInfo }) {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <header className="glass overflow-hidden rounded-xl">
+    <header className="glass overflow-hidden rounded-2xl">
       <div className="h-[3px] bg-brass-500" />
-      <div className="px-3 py-3 sm:px-4 lg:px-5">
+      <div className="px-3 py-3 sm:px-4 sm:py-3.5">
         <div className="flex items-center justify-between gap-3">
           <p className="text-[10px] font-bold tracking-[0.2em] text-brass-600 sm:text-[11px] dark:text-brass-400">
             SOLAR SITE
           </p>
           <div className="flex shrink-0 items-center gap-2">
-            <span className="inline-flex items-center gap-2 rounded-full border border-signal-500/70 px-2.5 py-1 text-xs font-bold text-signal-500 sm:px-3 sm:py-1.5 sm:text-sm">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-signal-500/70 px-2.5 py-1 text-xs font-bold text-signal-500 sm:px-3 sm:text-sm">
               <span className="h-2 w-2 rounded-full bg-signal-500 animate-soft-pulse" />
               Online
             </span>
             <button
               type="button"
               onClick={toggleTheme}
-              className="copy glass-inset flex h-9 w-9 items-center justify-center rounded-full"
+              className="copy glass-inset flex h-8 w-8 items-center justify-center rounded-full sm:h-9 sm:w-9"
               aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
             >
               {theme === "dark" ? <SunIcon /> : <MoonIcon />}
@@ -28,27 +28,27 @@ function SiteHeader({ siteInfo }) {
           </div>
         </div>
 
-        <h1 className="copy mt-2 font-display text-2xl font-medium leading-tight sm:text-3xl lg:text-4xl lg:leading-none">
+        <h1 className="copy mt-1.5 font-display text-2xl font-medium leading-tight sm:text-3xl">
           {siteName}
         </h1>
 
-        <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-2.5 flex flex-col gap-2.5 sm:flex-row sm:items-center sm:justify-between">
           <p className="copy-muted flex items-center gap-1.5 text-sm">
             <LocationIcon />
             {location}
           </p>
-          <div className="glass-inset flex w-fit items-center gap-4 rounded-lg px-3 py-1.5">
+          <div className="glass-inset flex w-fit items-center gap-4 rounded-xl px-3 py-1.5">
             <div>
-              <p className="copy font-numbers text-xl font-extrabold tabular-nums leading-none tracking-tight">
+              <p className="copy font-numbers text-xl font-extrabold tabular-nums leading-none tracking-tight sm:text-2xl">
                 {totalPanels}
               </p>
               <p className="copy-muted mt-0.5 text-[10px] font-bold tracking-[0.12em]">
                 TOTAL PANELS
               </p>
             </div>
-            <div className="h-7 w-px bg-ink-900/15" />
+            <div className="h-7 w-px bg-ink-900/12" />
             <div>
-              <p className="copy font-numbers text-xl font-extrabold tabular-nums leading-none tracking-tight">
+              <p className="copy font-numbers text-xl font-extrabold tabular-nums leading-none tracking-tight sm:text-2xl">
                 {activePanels}
               </p>
               <p className="mt-0.5 text-[10px] font-bold tracking-[0.12em] text-signal-500">
@@ -82,7 +82,7 @@ function LocationIcon() {
 
 function SunIcon() {
   return (
-    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <svg className="h-4 w-4 sm:h-5 sm:w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.8" />
       <path
         d="M12 3v2.2M12 18.8V21M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M3 12h2.2M18.8 12H21M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"
@@ -96,7 +96,7 @@ function SunIcon() {
 
 function MoonIcon() {
   return (
-    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <svg className="h-4 w-4 sm:h-5 sm:w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path
         d="M20 13.5A7.5 7.5 0 1 1 10.5 4 6 6 0 0 0 20 13.5Z"
         stroke="currentColor"
