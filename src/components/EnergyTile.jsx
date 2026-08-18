@@ -7,18 +7,18 @@ function EnergyTile({ label, value, unit, tone }) {
   };
 
   return (
-    <article className="min-w-0 px-3 py-3 last:sm:col-span-2 last:md:col-span-1 sm:px-4 sm:py-4">
-      <p className="copy-muted truncate text-[10px] font-bold tracking-[0.12em] sm:text-[11px] sm:tracking-[0.14em]">
+    <article className="min-w-0 px-3 py-3 last:col-span-2 last:md:col-span-1 md:px-4">
+      <p className="copy-muted truncate text-[10px] font-bold tracking-[0.12em] md:text-[11px] md:tracking-[0.14em]">
         {label}
       </p>
       <p
-        className={`mt-2 font-numbers text-2xl font-extrabold tabular-nums leading-none tracking-tight sm:text-3xl ${
+        className={`mt-1.5 font-numbers text-2xl font-extrabold tabular-nums leading-none tracking-tight md:text-3xl ${
           numberClasses[tone] || "copy"
         }`}
       >
         {formatValue(value)}
       </p>
-      <p className="copy-muted mt-1.5 text-xs font-bold sm:text-sm">{unit}</p>
+      <p className="copy-muted mt-1 text-xs font-bold">{unit}</p>
     </article>
   );
 }
