@@ -15,20 +15,20 @@ function StatCard({
 
   return (
     <article
-      className={`rounded-xl p-4 transition duration-200 hover:-translate-y-0.5 ${cardClasses}`}
+      className={`min-w-0 rounded-xl p-3 transition duration-200 hover:-translate-y-0.5 sm:p-4 ${cardClasses}`}
     >
-      <div className="relative flex items-start justify-between gap-3">
-        <p className="copy-muted text-[11px] font-bold tracking-[0.14em]">
+      <div className="relative flex items-start justify-between gap-2">
+        <p className="copy-muted truncate text-[10px] font-bold tracking-[0.12em] sm:text-[11px] sm:tracking-[0.14em]">
           {label}
         </p>
-        <span className="rounded-md bg-brass-500/10 p-1.5 text-brass-600 dark:text-brass-400">
+        <span className="shrink-0 rounded-md bg-brass-500/10 p-1.5 text-brass-600 dark:text-brass-400">
           {icon}
         </span>
       </div>
-      <div className="mt-3 flex items-end justify-between gap-3">
-        <p className="copy font-numbers text-3xl font-extrabold tabular-nums leading-none tracking-tight md:text-4xl">
+      <div className="mt-3 flex items-end justify-between gap-2">
+        <p className="copy min-w-0 font-numbers text-[28px] font-extrabold tabular-nums leading-none tracking-tight sm:text-3xl md:text-4xl">
           {formatValue(value)}
-          <span className="copy-muted ml-1.5 align-top font-sans text-sm font-bold">
+          <span className="copy-muted ml-1 align-top font-sans text-xs font-bold sm:ml-1.5 sm:text-sm">
             {unit}
           </span>
         </p>

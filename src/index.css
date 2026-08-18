@@ -26,6 +26,7 @@ body {
   --chart-grid: rgba(20, 23, 20, 0.1);
   --chart-tick: #4e534e;
   min-height: 100svh;
+  overflow-x: hidden;
   color: rgb(var(--ink));
   background-color: var(--page);
   background-image: radial-gradient(var(--grid) 1.2px, transparent 1.2px);
@@ -87,6 +88,17 @@ html:has(.page-shell.dark) body {
 
 .chart-box .recharts-cartesian-grid line {
   stroke: var(--chart-grid);
+}
+
+.chart-box {
+  min-width: 0;
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  .chart-box .recharts-cartesian-axis-tick text {
+    font-size: 10px;
+  }
 }
 
 .row-degraded {

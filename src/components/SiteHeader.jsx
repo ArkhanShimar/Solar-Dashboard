@@ -7,12 +7,12 @@ function SiteHeader({ siteInfo }) {
   return (
     <header className="glass overflow-hidden rounded-xl">
       <div className="h-[3px] bg-brass-500" />
-      <div className="flex flex-col gap-4 px-4 py-3.5 md:flex-row md:items-center md:justify-between md:px-5 md:py-3.5">
-        <div>
-          <p className="text-[11px] font-bold tracking-[0.2em] text-brass-600 dark:text-brass-400">
+      <div className="flex flex-col gap-3 px-3 py-3 sm:px-4 sm:py-3.5 lg:flex-row lg:items-center lg:justify-between lg:px-5">
+        <div className="min-w-0">
+          <p className="text-[10px] font-bold tracking-[0.2em] text-brass-600 sm:text-[11px] dark:text-brass-400">
             SOLAR SITE
           </p>
-          <h1 className="copy mt-1 font-display text-[28px] font-medium leading-none md:text-4xl">
+          <h1 className="copy mt-1 font-display text-2xl font-medium leading-tight sm:text-3xl lg:text-4xl lg:leading-none">
             {siteName}
           </h1>
           <p className="copy-muted mt-2 flex items-center gap-1.5 text-sm">
@@ -21,10 +21,10 @@ function SiteHeader({ siteInfo }) {
           </p>
         </div>
 
-        <div className="flex flex-wrap items-center gap-3">
-          <div className="glass-inset flex items-center gap-5 rounded-lg px-4 py-2">
+        <div className="flex shrink-0 flex-wrap items-center gap-2 sm:gap-3">
+          <div className="glass-inset flex items-center gap-4 rounded-lg px-3 py-2 sm:gap-5 sm:px-4">
             <div>
-              <p className="copy font-numbers text-2xl font-extrabold tabular-nums leading-none tracking-tight">
+              <p className="copy font-numbers text-xl font-extrabold tabular-nums leading-none tracking-tight sm:text-2xl">
                 {totalPanels}
               </p>
               <p className="copy-muted mt-1 text-[10px] font-bold tracking-[0.12em]">
@@ -33,7 +33,7 @@ function SiteHeader({ siteInfo }) {
             </div>
             <div className="h-8 w-px bg-ink-900/15" />
             <div>
-              <p className="copy font-numbers text-2xl font-extrabold tabular-nums leading-none tracking-tight">
+              <p className="copy font-numbers text-xl font-extrabold tabular-nums leading-none tracking-tight sm:text-2xl">
                 {activePanels}
               </p>
               <p className="mt-1 text-[10px] font-bold tracking-[0.12em] text-signal-500">

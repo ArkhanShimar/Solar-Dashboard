@@ -3,7 +3,7 @@ function PercentRing({ percent }) {
 
   return (
     <svg
-      className="h-14 w-14 shrink-0 -rotate-90"
+      className="h-11 w-11 shrink-0 -rotate-90 sm:h-14 sm:w-14"
       viewBox="0 0 36 36"
       aria-hidden="true"
     >
