@@ -49,3 +49,21 @@ body {
   border-top: 2px solid #c4962a;
   border-right: 2px solid #c4962a;
 }
+
+.chart-box .recharts-cartesian-axis-tick text {
+  fill: #4e534e;
+  font-size: 12px;
+  font-family: "Atkinson Hyperlegible", system-ui, sans-serif;
+}
+
+.chart-box .recharts-cartesian-grid line {
+  stroke: rgba(20, 23, 20, 0.12);
+}
+
+.row-degraded {
+  background: rgba(201, 162, 39, 0.28);
+}
+
+.row-offline {
+  background: rgba(179, 58, 43, 0.22);
+}
