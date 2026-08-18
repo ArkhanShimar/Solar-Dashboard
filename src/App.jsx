@@ -12,10 +12,13 @@ import EnergySummary from "./components/EnergySummary";
 import HourlyChart from "./components/HourlyChart";
 import WeeklyChart from "./components/WeeklyChart";
 import PanelTable from "./components/PanelTable";
+import { useTheme } from "./context/ThemeContext";
 
 function App() {
+  const { theme } = useTheme();
+
   return (
-    <div className="page-shell">
+    <div className={theme === "dark" ? "page-shell dark" : "page-shell"}>
       <div className="relative mx-auto max-w-6xl px-4 py-5 pb-10 md:px-6 md:py-6">
         <SiteHeader siteInfo={siteInfo} />
         <main className="mt-6 flex flex-col gap-6">

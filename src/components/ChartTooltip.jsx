@@ -4,7 +4,7 @@ function ChartTooltip({ active, payload, label, unit }) {
   }
 
   return (
-    <div className="rounded-lg border border-white/80 bg-white/90 px-3 py-2">
+    <div className="glass rounded-lg px-3 py-2">
       <p className="text-xs font-bold text-ink-400">{label}</p>
       <p className="font-numbers text-xl font-extrabold text-pitch-900">
         {payload[0].value}

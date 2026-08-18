@@ -40,9 +40,10 @@ Styling is Tailwind. Charts are Recharts.
 - Hourly output chart
 - Weekly output chart
 - Panel group table (Offline in red, Degraded in yellow)
+- Dark mode toggle in the header (Context API)
 
 ## Why I built it like this
 
-I split the dashboard into separate components because putting the charts and the table into App.jsx would have made that file huge and hard to follow. Each component only gets the slice of data it needs as props, so if they change a number I just edit `solarData.js` and nothing else. For the panel table I map the status from the data to a CSS class, I didnt hardcode which row is red. I put the two charts side by side on desktop since they are both graphs and stacking them felt like wasted space.
+I split the dashboard into separate components because putting the charts and the table into App.jsx would have made that file huge and hard to follow. Each component only gets the slice of data it needs as props, so if they change a number I just edit `solarData.js` and nothing else. For the panel table I map the status from the data to a CSS class, I didnt hardcode which row is red. I put the two charts side by side on desktop since they are both graphs and stacking them felt like wasted space. Dark mode is a Context toggle in the header so I didnt have to pass theme props through every component.
 
 Works on desktop and tablet.

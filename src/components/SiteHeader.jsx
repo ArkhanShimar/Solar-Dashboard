@@ -1,5 +1,8 @@
+import { useTheme } from "../context/ThemeContext";
+
 function SiteHeader({ siteInfo }) {
   const { siteName, location, totalPanels, activePanels } = siteInfo;
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <header className="glass overflow-hidden rounded-xl">
@@ -42,6 +45,14 @@ function SiteHeader({ siteInfo }) {
             <span className="h-2 w-2 rounded-full bg-white animate-soft-pulse" />
             Online
           </span>
+          <button
+            type="button"
+            onClick={toggleTheme}
+            className="glass-inset rounded-lg px-3 py-2 text-sm font-bold text-pitch-900"
+            aria-label="Toggle dark mode"
+          >
+            {theme === "dark" ? "Light" : "Dark"}
+          </button>
         </div>
       </div>
     </header>
