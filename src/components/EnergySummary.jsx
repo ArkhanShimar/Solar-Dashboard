@@ -4,7 +4,7 @@ import SectionBar from "./SectionBar";
 function EnergySummary({ energySummary }) {
   const tiles = [
     {
-      label: "TODAY",
+      label: "TODAY'S ENERGY",
       value: energySummary.todayKWh,
       unit: "kWh",
       tone: "brass",
@@ -20,7 +20,7 @@ function EnergySummary({ energySummary }) {
       unit: "kWh",
     },
     {
-      label: "LIFETIME",
+      label: "LIFETIME TOTAL",
       value: energySummary.totalLifetimeKWh,
       unit: "kWh",
     },

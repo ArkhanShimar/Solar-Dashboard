@@ -20,7 +20,12 @@ function WeeklyChart({ weeklyData }) {
             <BarChart data={weeklyData}>
               <CartesianGrid vertical={false} />
               <XAxis dataKey="day" tickLine={false} axisLine={false} />
-              <YAxis tickLine={false} axisLine={false} width={36} />
+              <YAxis
+                tickLine={false}
+                axisLine={false}
+                width={56}
+                unit=" kWh"
+              />
               <Tooltip
                 cursor={false}
                 content={(props) => <ChartTooltip {...props} unit="kWh" />}

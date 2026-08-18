@@ -25,7 +25,12 @@ function HourlyChart({ hourlyToday }) {
                 axisLine={false}
                 minTickGap={16}
               />
-              <YAxis tickLine={false} axisLine={false} width={36} />
+              <YAxis
+                tickLine={false}
+                axisLine={false}
+                width={48}
+                unit=" kW"
+              />
               <Tooltip
                 cursor={false}
                 content={(props) => <ChartTooltip {...props} unit="kW" />}
