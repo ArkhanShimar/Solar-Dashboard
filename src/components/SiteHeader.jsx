@@ -20,7 +20,7 @@ function SiteHeader({ siteInfo }) {
             <button
               type="button"
               onClick={toggleTheme}
-              className="copy glass-inset rounded-lg p-2"
+              className="copy glass-inset flex h-9 w-9 items-center justify-center rounded-full"
               aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
             >
               {theme === "dark" ? <SunIcon /> : <MoonIcon />}
