@@ -10,16 +10,16 @@ function PanelTable({ panelGroups }) {
           <table className="w-full min-w-[480px] text-left">
             <thead>
               <tr className="border-b border-white/50">
-                <th className="px-4 py-3 text-[11px] font-bold tracking-[0.14em] text-ink-400">
+                <th className="copy-muted px-4 py-3 text-[11px] font-bold tracking-[0.14em]">
                   GROUP
                 </th>
-                <th className="px-4 py-3 text-[11px] font-bold tracking-[0.14em] text-ink-400">
+                <th className="copy-muted px-4 py-3 text-[11px] font-bold tracking-[0.14em]">
                   PANELS
                 </th>
-                <th className="px-4 py-3 text-[11px] font-bold tracking-[0.14em] text-ink-400">
+                <th className="copy-muted px-4 py-3 text-[11px] font-bold tracking-[0.14em]">
                   OUTPUT (kW)
                 </th>
-                <th className="px-4 py-3 text-[11px] font-bold tracking-[0.14em] text-ink-400">
+                <th className="copy-muted px-4 py-3 text-[11px] font-bold tracking-[0.14em]">
                   STATUS
                 </th>
               </tr>
@@ -27,11 +27,11 @@ function PanelTable({ panelGroups }) {
             <tbody>
               {panelGroups.map((group) => (
                 <tr key={group.groupId} className={rowClass(group.status)}>
-                  <td className="px-4 py-3 font-numbers text-xl font-extrabold text-ink-900">
+                  <td className="copy px-4 py-3 font-numbers text-xl font-extrabold">
                     {group.groupId}
                   </td>
-                  <td className="px-4 py-3 text-ink-900">{group.panels}</td>
-                  <td className="px-4 py-3 font-numbers text-xl font-extrabold tabular-nums text-ink-900">
+                  <td className="copy px-4 py-3">{group.panels}</td>
+                  <td className="copy px-4 py-3 font-numbers text-xl font-extrabold tabular-nums">
                     {formatValue(group.outputKW)}
                   </td>
                   <td className="px-4 py-3">
@@ -67,7 +67,7 @@ function StatusBadge({ status }) {
   return (
     <span
       className={`inline-block rounded-full px-2.5 py-1 text-xs font-bold ${
-        badgeClass[status] || "bg-white/40 text-ink-500"
+        badgeClass[status] || "bg-white/40 copy-muted"
       }`}
     >
       {status}

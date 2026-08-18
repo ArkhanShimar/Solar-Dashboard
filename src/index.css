@@ -96,3 +96,34 @@ html:has(.page-shell.dark) body {
 .row-offline {
   background: rgba(179, 58, 43, 0.22);
 }
+
+.copy {
+  color: #161310;
+}
+
+.copy-muted {
+  color: #6f746e;
+}
+
+.dark .copy,
+.dark h1,
+.dark h2,
+.dark .font-numbers {
+  color: #f3f0e8;
+}
+
+.dark .copy-muted {
+  color: #c8c4ba;
+}
+
+.dark .text-brass-600 {
+  color: #e0b84a;
+}
+
+.dark .text-amber-800 {
+  color: #f0d56a;
+}
+
+.dark .text-red-800 {
+  color: #f0a8a0;
+}

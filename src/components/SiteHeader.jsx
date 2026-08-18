@@ -9,13 +9,13 @@ function SiteHeader({ siteInfo }) {
       <div className="h-[3px] bg-brass-500" />
       <div className="flex flex-col gap-4 px-4 py-3.5 md:flex-row md:items-center md:justify-between md:px-5 md:py-3.5">
         <div>
-          <p className="text-[11px] font-bold tracking-[0.2em] text-brass-600">
+          <p className="text-[11px] font-bold tracking-[0.2em] text-brass-600 dark:text-brass-400">
             SOLAR SITE
           </p>
-          <h1 className="mt-1 font-display text-[28px] font-medium leading-none text-ink-900 md:text-4xl">
+          <h1 className="copy mt-1 font-display text-[28px] font-medium leading-none md:text-4xl">
             {siteName}
           </h1>
-          <p className="mt-2 flex items-center gap-1.5 text-sm text-ink-500">
+          <p className="copy-muted mt-2 flex items-center gap-1.5 text-sm">
             <LocationIcon />
             {location}
           </p>
@@ -24,16 +24,16 @@ function SiteHeader({ siteInfo }) {
         <div className="flex flex-wrap items-center gap-3">
           <div className="glass-inset flex items-center gap-5 rounded-lg px-4 py-2">
             <div>
-              <p className="font-numbers text-2xl font-extrabold tabular-nums leading-none tracking-tight text-ink-900">
+              <p className="copy font-numbers text-2xl font-extrabold tabular-nums leading-none tracking-tight">
                 {totalPanels}
               </p>
-              <p className="mt-1 text-[10px] font-bold tracking-[0.12em] text-ink-400">
+              <p className="copy-muted mt-1 text-[10px] font-bold tracking-[0.12em]">
                 TOTAL PANELS
               </p>
             </div>
             <div className="h-8 w-px bg-ink-900/15" />
             <div>
-              <p className="font-numbers text-2xl font-extrabold tabular-nums leading-none tracking-tight text-ink-900">
+              <p className="copy font-numbers text-2xl font-extrabold tabular-nums leading-none tracking-tight">
                 {activePanels}
               </p>
               <p className="mt-1 text-[10px] font-bold tracking-[0.12em] text-signal-500">
@@ -48,7 +48,7 @@ function SiteHeader({ siteInfo }) {
           <button
             type="button"
             onClick={toggleTheme}
-            className="glass-inset rounded-lg p-2 text-ink-900"
+            className="copy glass-inset rounded-lg p-2"
             aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
           >
             {theme === "dark" ? <SunIcon /> : <MoonIcon />}
@@ -62,7 +62,7 @@ function SiteHeader({ siteInfo }) {
 function LocationIcon() {
   return (
     <svg
-      className="h-4 w-4 text-brass-600"
+      className="h-4 w-4 text-brass-600 dark:text-brass-400"
       viewBox="0 0 24 24"
       fill="none"
       aria-hidden="true"

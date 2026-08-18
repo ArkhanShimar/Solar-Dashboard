@@ -5,10 +5,10 @@ function ChartTooltip({ active, payload, label, unit }) {
 
   return (
     <div className="glass rounded-lg px-3 py-2">
-      <p className="text-xs font-bold text-ink-400">{label}</p>
-      <p className="font-numbers text-xl font-extrabold text-ink-900">
+      <p className="copy-muted text-xs font-bold">{label}</p>
+      <p className="copy font-numbers text-xl font-extrabold">
         {payload[0].value}
-        <span className="ml-1 font-sans text-xs font-bold text-ink-400">{unit}</span>
+        <span className="copy-muted ml-1 font-sans text-xs font-bold">{unit}</span>
       </p>
     </div>
   );
