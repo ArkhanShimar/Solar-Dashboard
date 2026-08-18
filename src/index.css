@@ -109,6 +109,22 @@ html:has(.page-shell.dark) body {
   background: rgba(179, 58, 43, 0.22);
 }
 
+.energy-grid {
+  background: rgba(20, 23, 20, 0.1);
+}
+
+.energy-grid > * {
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.dark .energy-grid {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.dark .energy-grid > * {
+  background: #161916;
+}
+
 .copy {
   color: #161310;
 }
