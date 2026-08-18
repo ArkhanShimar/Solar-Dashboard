@@ -39,7 +39,7 @@ body {
   --ink-muted: 155 151 140;
   --page: #121512;
   --grid: rgba(243, 240, 232, 0.08);
-  --glass: rgba(255, 255, 255, 0.07);
+  --glass: rgba(255, 255, 255, 0.12);
   --glass-border: rgba(255, 255, 255, 0.12);
   --glass-inset: rgba(255, 255, 255, 0.06);
   --chart-grid: rgba(243, 240, 232, 0.12);
@@ -107,22 +107,6 @@ html:has(.page-shell.dark) body {
 
 .row-offline {
   background: rgba(179, 58, 43, 0.22);
-}
-
-.energy-grid {
-  background: rgba(20, 23, 20, 0.1);
-}
-
-.energy-grid > * {
-  background: rgba(255, 255, 255, 0.55);
-}
-
-.dark .energy-grid {
-  background: rgba(255, 255, 255, 0.12);
-}
-
-.dark .energy-grid > * {
-  background: #161916;
 }
 
 .copy {
