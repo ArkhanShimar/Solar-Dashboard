@@ -15,9 +15,9 @@ body {
 }
 
 .page-shell {
-  --ink: #141714;
-  --ink-mid: #4e534e;
-  --ink-muted: #6f746e;
+  --ink: 20 23 20;
+  --ink-mid: 78 83 78;
+  --ink-muted: 111 116 110;
   --page: #ffffff;
   --grid: rgba(20, 23, 20, 0.06);
   --glass: rgba(255, 255, 255, 0.72);
@@ -26,16 +26,16 @@ body {
   --chart-grid: rgba(20, 23, 20, 0.1);
   --chart-tick: #4e534e;
   min-height: 100svh;
-  color: var(--ink);
+  color: rgb(var(--ink));
   background-color: var(--page);
   background-image: radial-gradient(var(--grid) 1.2px, transparent 1.2px);
   background-size: 20px 20px;
 }
 
 .page-shell.dark {
-  --ink: #f3f0e8;
-  --ink-mid: #c5c1b6;
-  --ink-muted: #9b978c;
+  --ink: 243 240 232;
+  --ink-mid: 197 193 182;
+  --ink-muted: 155 151 140;
   --page: #121512;
   --grid: rgba(243, 240, 232, 0.08);
   --glass: rgba(255, 255, 255, 0.07);

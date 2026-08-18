@@ -4,7 +4,7 @@ function SectionBar({ kicker, title }) {
       <p className="text-[11px] font-bold tracking-[0.2em] text-brass-600">
         {kicker}
       </p>
-      <h2 className="font-display text-xl text-pitch-900 md:text-2xl">{title}</h2>
+      <h2 className="font-display text-xl text-ink-900 md:text-2xl">{title}</h2>
     </div>
   );
 }

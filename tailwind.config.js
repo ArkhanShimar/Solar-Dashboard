@@ -15,7 +15,7 @@ export default {
           600: "#3A413C",
           700: "#2A2F2B",
           800: "#1E2320",
-          900: "var(--ink)",
+          900: "rgb(var(--ink) / <alpha-value>)",
         },
         brass: {
           400: "#D4B04A",
@@ -28,10 +28,10 @@ export default {
           600: "#24613A",
         },
         ink: {
-          400: "var(--ink-muted)",
-          500: "var(--ink-mid)",
-          700: "var(--ink-mid)",
-          900: "var(--ink)",
+          400: "rgb(var(--ink-muted) / <alpha-value>)",
+          500: "rgb(var(--ink-mid) / <alpha-value>)",
+          700: "rgb(var(--ink-mid) / <alpha-value>)",
+          900: "rgb(var(--ink) / <alpha-value>)",
         },
       },
       fontFamily: {

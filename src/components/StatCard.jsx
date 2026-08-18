@@ -26,7 +26,7 @@ function StatCard({
         </span>
       </div>
       <div className="mt-3 flex items-end justify-between gap-3">
-        <p className="font-numbers text-3xl font-extrabold tabular-nums leading-none tracking-tight text-pitch-900 md:text-4xl">
+        <p className="font-numbers text-3xl font-extrabold tabular-nums leading-none tracking-tight text-ink-900 md:text-4xl">
           {formatValue(value)}
           <span className="ml-1.5 align-top font-sans text-sm font-bold text-ink-400">
             {unit}

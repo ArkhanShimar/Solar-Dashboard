@@ -27,11 +27,11 @@ function PanelTable({ panelGroups }) {
             <tbody>
               {panelGroups.map((group) => (
                 <tr key={group.groupId} className={rowClass(group.status)}>
-                  <td className="px-4 py-3 font-numbers text-xl font-extrabold text-pitch-900">
+                  <td className="px-4 py-3 font-numbers text-xl font-extrabold text-ink-900">
                     {group.groupId}
                   </td>
-                  <td className="px-4 py-3 text-pitch-900">{group.panels}</td>
-                  <td className="px-4 py-3 font-numbers text-xl font-extrabold tabular-nums text-pitch-900">
+                  <td className="px-4 py-3 text-ink-900">{group.panels}</td>
+                  <td className="px-4 py-3 font-numbers text-xl font-extrabold tabular-nums text-ink-900">
                     {formatValue(group.outputKW)}
                   </td>
                   <td className="px-4 py-3">
