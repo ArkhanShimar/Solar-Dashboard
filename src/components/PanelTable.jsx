@@ -7,19 +7,19 @@ function PanelTable({ panelGroups }) {
       <SectionBar kicker="ARRAYS" title="Panel groups" />
       <div className="glass overflow-hidden rounded-xl">
         <div className="overflow-x-auto">
-          <table className="w-full min-w-[480px] text-left">
+          <table className="w-full min-w-[420px] text-left md:min-w-0">
             <thead>
               <tr className="border-b border-white/50">
-                <th className="copy-muted px-4 py-3 text-[11px] font-bold tracking-[0.14em]">
+                <th className="copy-muted px-3 py-2.5 text-[10px] font-bold tracking-[0.14em] sm:px-4 sm:py-3 sm:text-[11px]">
                   GROUP
                 </th>
-                <th className="copy-muted px-4 py-3 text-[11px] font-bold tracking-[0.14em]">
+                <th className="copy-muted px-3 py-2.5 text-[10px] font-bold tracking-[0.14em] sm:px-4 sm:py-3 sm:text-[11px]">
                   PANELS
                 </th>
-                <th className="copy-muted px-4 py-3 text-[11px] font-bold tracking-[0.14em]">
+                <th className="copy-muted px-3 py-2.5 text-[10px] font-bold tracking-[0.14em] sm:px-4 sm:py-3 sm:text-[11px]">
                   OUTPUT (kW)
                 </th>
-                <th className="copy-muted px-4 py-3 text-[11px] font-bold tracking-[0.14em]">
+                <th className="copy-muted px-3 py-2.5 text-[10px] font-bold tracking-[0.14em] sm:px-4 sm:py-3 sm:text-[11px]">
                   STATUS
                 </th>
               </tr>
@@ -27,14 +27,14 @@ function PanelTable({ panelGroups }) {
             <tbody>
               {panelGroups.map((group) => (
                 <tr key={group.groupId} className={rowClass(group.status)}>
-                  <td className="copy px-4 py-3 font-numbers text-xl font-extrabold">
+                  <td className="copy px-3 py-2.5 font-numbers text-lg font-extrabold sm:px-4 sm:py-3 sm:text-xl">
                     {group.groupId}
                   </td>
-                  <td className="copy px-4 py-3">{group.panels}</td>
-                  <td className="copy px-4 py-3 font-numbers text-xl font-extrabold tabular-nums">
+                  <td className="copy px-3 py-2.5 sm:px-4 sm:py-3">{group.panels}</td>
+                  <td className="copy px-3 py-2.5 font-numbers text-lg font-extrabold tabular-nums sm:px-4 sm:py-3 sm:text-xl">
                     {formatValue(group.outputKW)}
                   </td>
-                  <td className="px-4 py-3">
+                  <td className="px-3 py-2.5 sm:px-4 sm:py-3">
                     <StatusBadge status={group.status} />
                   </td>
                 </tr>

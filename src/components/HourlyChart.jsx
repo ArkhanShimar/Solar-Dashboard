@@ -12,20 +12,20 @@ import ChartTooltip from "./ChartTooltip";
 
 function HourlyChart({ hourlyToday }) {
   return (
-    <section>
+    <section className="min-w-0">
       <SectionBar kicker="TODAY" title="Hourly output" />
-      <div className="glass chart-box rounded-xl px-2 py-4 md:px-4">
-        <div className="h-64">
+      <div className="glass chart-box rounded-xl px-1 py-3 sm:px-2 sm:py-4 md:px-4">
+        <div className="h-52 w-full sm:h-60 md:h-64">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart data={hourlyToday}>
               <CartesianGrid vertical={false} />
-              <XAxis dataKey="hour" tickLine={false} axisLine={false} />
-              <YAxis
-                unit=" kW"
+              <XAxis
+                dataKey="hour"
                 tickLine={false}
                 axisLine={false}
-                width={52}
+                minTickGap={16}
               />
+              <YAxis tickLine={false} axisLine={false} width={36} />
               <Tooltip
                 cursor={false}
                 content={(props) => <ChartTooltip {...props} unit="kW" />}

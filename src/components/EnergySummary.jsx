@@ -37,7 +37,7 @@ function EnergySummary({ energySummary }) {
       <SectionBar kicker="PRODUCTION" title="Energy summary" />
       <div className="glass overflow-hidden rounded-xl">
         <div className="h-[3px] bg-brass-500" />
-        <div className="grid grid-cols-1 divide-y divide-white/50 sm:grid-cols-2 sm:divide-y-0 lg:grid-cols-5">
+        <div className="grid grid-cols-1 gap-px bg-white/40 sm:grid-cols-2 md:grid-cols-5">
           {tiles.map((tile) => (
             <EnergyTile
               key={tile.label}
