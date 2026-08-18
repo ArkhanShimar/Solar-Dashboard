@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local interview notes, not part of the repo
+interview-notes.md
+

@@ -4,6 +4,8 @@ Intern task. Its a read only dashboard for Sunfield Solar Farm in Colombo.
 
 I used React + Vite. No backend and no api calls. All the numbers come from `src/data/solarData.js` (the same data they sent).
 
+Live site: https://sunfield-dashboard.vercel.app/
+
 ## How to run
 
 You need Node installed.
