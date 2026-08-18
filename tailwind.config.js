@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
@@ -14,7 +15,7 @@ export default {
           600: "#3A413C",
           700: "#2A2F2B",
           800: "#1E2320",
-          900: "#141714",
+          900: "var(--ink)",
         },
         brass: {
           400: "#D4B04A",
@@ -27,10 +28,10 @@ export default {
           600: "#24613A",
         },
         ink: {
-          400: "#6F746E",
-          500: "#4E534E",
-          700: "#2A2F2B",
-          900: "#141714",
+          400: "var(--ink-muted)",
+          500: "var(--ink-mid)",
+          700: "var(--ink-mid)",
+          900: "var(--ink)",
         },
       },
       fontFamily: {

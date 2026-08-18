@@ -10,29 +10,58 @@ body,
 
 body {
   margin: 0;
-  background-color: #d6d1c7;
+  background-color: #ffffff;
   color: #141714;
 }
 
 .page-shell {
+  --ink: #141714;
+  --ink-mid: #4e534e;
+  --ink-muted: #6f746e;
+  --page: #ffffff;
+  --grid: rgba(20, 23, 20, 0.06);
+  --glass: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(20, 23, 20, 0.1);
+  --glass-inset: rgba(20, 23, 20, 0.04);
+  --chart-grid: rgba(20, 23, 20, 0.1);
+  --chart-tick: #4e534e;
   min-height: 100svh;
-  background-color: #d6d1c7;
-  background-image: linear-gradient(rgba(20, 23, 20, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(20, 23, 20, 0.045) 1px, transparent 1px);
-  background-size: 28px 28px;
+  color: var(--ink);
+  background-color: var(--page);
+  background-image: radial-gradient(var(--grid) 1.2px, transparent 1.2px);
+  background-size: 20px 20px;
+}
+
+.page-shell.dark {
+  --ink: #f3f0e8;
+  --ink-mid: #c5c1b6;
+  --ink-muted: #9b978c;
+  --page: #121512;
+  --grid: rgba(243, 240, 232, 0.08);
+  --glass: rgba(255, 255, 255, 0.07);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-inset: rgba(255, 255, 255, 0.06);
+  --chart-grid: rgba(243, 240, 232, 0.12);
+  --chart-tick: #c5c1b6;
+}
+
+html:has(.page-shell.dark),
+html:has(.page-shell.dark) body {
+  background-color: #121512;
+  color: #f3f0e8;
 }
 
 .glass {
-  background: rgba(255, 255, 255, 0.42);
-  backdrop-filter: blur(18px) saturate(140%);
-  -webkit-backdrop-filter: blur(18px) saturate(140%);
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  box-shadow: 0 10px 28px -16px rgba(20, 23, 20, 0.32);
+  background: var(--glass);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 10px 28px -16px rgba(20, 23, 20, 0.22);
 }
 
 .glass-inset {
-  background: rgba(255, 255, 255, 0.28);
-  border: 1px solid rgba(255, 255, 255, 0.65);
+  background: var(--glass-inset);
+  border: 1px solid var(--glass-border);
 }
 
 .card-mark {
@@ -51,13 +80,13 @@ body {
 }
 
 .chart-box .recharts-cartesian-axis-tick text {
-  fill: #4e534e;
+  fill: var(--chart-tick);
   font-size: 12px;
   font-family: "Atkinson Hyperlegible", system-ui, sans-serif;
 }
 
 .chart-box .recharts-cartesian-grid line {
-  stroke: rgba(20, 23, 20, 0.12);
+  stroke: var(--chart-grid);
 }
 
 .row-degraded {
