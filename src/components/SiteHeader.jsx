@@ -7,52 +7,55 @@ function SiteHeader({ siteInfo }) {
   return (
     <header className="glass overflow-hidden rounded-xl">
       <div className="h-[3px] bg-brass-500" />
-      <div className="flex flex-col gap-3 px-3 py-3 sm:px-4 sm:py-3.5 lg:flex-row lg:items-center lg:justify-between lg:px-5">
-        <div className="min-w-0">
+      <div className="px-3 py-3 sm:px-4 lg:px-5">
+        <div className="flex items-center justify-between gap-3">
           <p className="text-[10px] font-bold tracking-[0.2em] text-brass-600 sm:text-[11px] dark:text-brass-400">
             SOLAR SITE
           </p>
-          <h1 className="copy mt-1 font-display text-2xl font-medium leading-tight sm:text-3xl lg:text-4xl lg:leading-none">
-            {siteName}
-          </h1>
-          <p className="copy-muted mt-2 flex items-center gap-1.5 text-sm">
+          <div className="flex shrink-0 items-center gap-2">
+            <span className="inline-flex items-center gap-2 rounded-full border border-signal-500/70 px-2.5 py-1 text-xs font-bold text-signal-500 sm:px-3 sm:py-1.5 sm:text-sm">
+              <span className="h-2 w-2 rounded-full bg-signal-500 animate-soft-pulse" />
+              Online
+            </span>
+            <button
+              type="button"
+              onClick={toggleTheme}
+              className="copy glass-inset rounded-lg p-2"
+              aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+            >
+              {theme === "dark" ? <SunIcon /> : <MoonIcon />}
+            </button>
+          </div>
+        </div>
+
+        <h1 className="copy mt-2 font-display text-2xl font-medium leading-tight sm:text-3xl lg:text-4xl lg:leading-none">
+          {siteName}
+        </h1>
+
+        <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <p className="copy-muted flex items-center gap-1.5 text-sm">
             <LocationIcon />
             {location}
           </p>
-        </div>
-
-        <div className="flex shrink-0 flex-wrap items-center gap-2 sm:gap-3">
-          <div className="glass-inset flex items-center gap-4 rounded-lg px-3 py-2 sm:gap-5 sm:px-4">
+          <div className="glass-inset flex w-fit items-center gap-4 rounded-lg px-3 py-1.5">
             <div>
-              <p className="copy font-numbers text-xl font-extrabold tabular-nums leading-none tracking-tight sm:text-2xl">
+              <p className="copy font-numbers text-xl font-extrabold tabular-nums leading-none tracking-tight">
                 {totalPanels}
               </p>
-              <p className="copy-muted mt-1 text-[10px] font-bold tracking-[0.12em]">
+              <p className="copy-muted mt-0.5 text-[10px] font-bold tracking-[0.12em]">
                 TOTAL PANELS
               </p>
             </div>
-            <div className="h-8 w-px bg-ink-900/15" />
+            <div className="h-7 w-px bg-ink-900/15" />
             <div>
-              <p className="copy font-numbers text-xl font-extrabold tabular-nums leading-none tracking-tight sm:text-2xl">
+              <p className="copy font-numbers text-xl font-extrabold tabular-nums leading-none tracking-tight">
                 {activePanels}
               </p>
-              <p className="mt-1 text-[10px] font-bold tracking-[0.12em] text-signal-500">
+              <p className="mt-0.5 text-[10px] font-bold tracking-[0.12em] text-signal-500">
                 ACTIVE
               </p>
             </div>
           </div>
-          <span className="inline-flex items-center gap-2 rounded-full border border-signal-500/70 px-3 py-1.5 text-sm font-bold text-signal-500">
-            <span className="h-2 w-2 rounded-full bg-signal-500 animate-soft-pulse" />
-            Online
-          </span>
-          <button
-            type="button"
-            onClick={toggleTheme}
-            className="copy glass-inset rounded-lg p-2"
-            aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-          >
-            {theme === "dark" ? <SunIcon /> : <MoonIcon />}
-          </button>
         </div>
       </div>
     </header>
