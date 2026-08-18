@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div className={theme === "dark" ? "page-shell dark" : "page-shell"}>
-      <div className="relative mx-auto w-full max-w-6xl px-3 py-4 sm:px-4 md:px-6 md:py-6">
+      <div className="mx-auto w-full max-w-6xl px-3 py-4 sm:px-4 md:px-6 md:py-6">
         <SiteHeader siteInfo={siteInfo} />
         <main className="mt-4 flex min-w-0 flex-col gap-4 md:mt-6 md:gap-6">
           <LiveStats liveStats={liveStats} />

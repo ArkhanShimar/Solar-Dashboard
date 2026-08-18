@@ -16,8 +16,6 @@ body {
 
 .page-shell {
   --ink: 20 23 20;
-  --ink-mid: 78 83 78;
-  --ink-muted: 111 116 110;
   --page: #ffffff;
   --grid: rgba(20, 23, 20, 0.06);
   --glass: rgba(255, 255, 255, 0.72);
@@ -35,8 +33,6 @@ body {
 
 .page-shell.dark {
   --ink: 243 240 232;
-  --ink-mid: 197 193 182;
-  --ink-muted: 155 151 140;
   --page: #121512;
   --grid: rgba(243, 240, 232, 0.08);
   --glass: rgba(255, 255, 255, 0.12);
